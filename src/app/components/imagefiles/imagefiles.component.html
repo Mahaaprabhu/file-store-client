@@ -1,0 +1,7 @@
+<p>imagefiles works!</p>
+<div>
+    <div *ngFor="let mediaKeyValue of imageFiles">
+        <div>{{mediaKeyValue[1].filename}}</div>
+        <img [src]="getMediaFileUri(mediaKeyValue[1]._id)" [alt]="mediaKeyValue[1].filename" width="300" height="200">
+    </div>
+</div>

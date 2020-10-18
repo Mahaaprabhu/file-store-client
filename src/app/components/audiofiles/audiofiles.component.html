@@ -1,0 +1,10 @@
+<p>audiofiles works!</p>
+<div>
+    <div *ngFor="let mediaKeyValue of audioFiles">
+        <div>{{mediaKeyValue[1].filename}}</div>
+        <audio width="300" height="200" controls preload="none">
+            <source [src]="getMediaFileUri(mediaKeyValue[1]._id)" [type]="mediaKeyValue[1].contentType">
+            Your browser does not support the video tag.
+        </audio>
+    </div>
+</div>

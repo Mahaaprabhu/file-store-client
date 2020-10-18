@@ -1,0 +1,4 @@
+<form [formGroup]="mediaFormGroup" enctype="multipart/form-data" (ngSubmit)="onMediaSubmit($event)">
+    <input type="file" formControlName="mediaFormControl" name="media" (change)="onFileSelect($event)"/>
+    <input type="submit"/>
+</form>
