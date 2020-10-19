@@ -3,6 +3,7 @@ import { AppState } from '../models/AppState';
 import { MediaMetaData } from '../models/MediaMetaData';
 import { RestService } from '../services/rest.service';
 import { Subject, Observable } from 'rxjs';
+import { timeout } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -107,6 +108,9 @@ export class AppStateService {
   }
 
   public addMediaFile(formData: FormData) : void {
+    setTimeout(() => {
+      alert('You will be notified as soon as the file is persisted.');
+    }, 500);
     this.restService.postMediaFileToServer(formData).subscribe(
       (res) => {
         console.log(res);
