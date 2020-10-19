@@ -18,6 +18,7 @@ export class ImagefilesComponent implements OnInit, OnDestroy {
   private appState: AppState = new AppState();
 
   imageFiles: [String, MediaMetaData][] = [];
+  displayComponent: boolean = false;
 
   constructor(private appStateService: AppStateService, private restService: RestService) {
     this.subscribeToAppState();
@@ -31,6 +32,7 @@ export class ImagefilesComponent implements OnInit, OnDestroy {
       this.imageFiles = [...(appState.imageFilesMetaData.entries())].sort().reverse();
       console.log('(Image files Component) App State subcription received & sorted:');
       console.log(this.imageFiles);
+      this.displayComponent = this.appState.activeMediaSelectionType === 'Images';
     });
   }
 

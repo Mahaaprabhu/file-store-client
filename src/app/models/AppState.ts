@@ -6,4 +6,5 @@ export class AppState {
     videoFilesMetaData: Map<String, MediaMetaData> = new Map();
     imageFilesMetaData: Map<String, MediaMetaData> = new Map();
     otherFilesMetaData: Map<String, MediaMetaData> = new Map();
+    activeMediaSelectionType: String = 'Images';
 }

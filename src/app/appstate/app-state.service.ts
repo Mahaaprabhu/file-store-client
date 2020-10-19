@@ -14,6 +14,7 @@ export class AppStateService {
   private imageFilesMetaData: Map<String, MediaMetaData> = new Map();
   private videoFilesMetaData: Map<String, MediaMetaData> = new Map();
   private otherFilesMetaData: Map<String, MediaMetaData> = new Map();
+  private activeMediaSelectionType: String = 'Images';
 
   private appStateSubject: Subject<AppState> = new Subject<AppState>();
   mediaMetas: MediaMetaData[] = [];
@@ -45,6 +46,11 @@ export class AppStateService {
     this.appStateSubject.next(this.getShallowCopiedAppState());
   }
 
+  public updateAtiveMediaSelectionType(categorySelection: String): void {
+    this.activeMediaSelectionType = categorySelection || 'Images';
+    this.notifySubcribers();
+  }
+
   private getShallowCopiedAppState(): AppState {
     let appState: AppState = new AppState();
     appState.allFilesMetaData = new Map(this.allFilesMetaData);
@@ -52,6 +58,7 @@ export class AppStateService {
     appState.imageFilesMetaData = new Map(this.imageFilesMetaData);
     appState.videoFilesMetaData = new Map(this.videoFilesMetaData);
     appState.otherFilesMetaData = new Map(this.otherFilesMetaData);
+    appState.activeMediaSelectionType = this.activeMediaSelectionType;
     return appState;
   }
 
@@ -95,6 +102,8 @@ export class AppStateService {
     console.log(this.videoFilesMetaData);
     console.log('Other DATA:');
     console.log(this.otherFilesMetaData);
+    console.log('Selection Category:');
+    console.log(this.activeMediaSelectionType);
   }
 
   public addMediaFile(formData: FormData) : void {

@@ -17,6 +17,7 @@ export class VideofilesComponent implements OnInit, OnDestroy {
   private appState: AppState = new AppState();
 
   videoFiles: [String, MediaMetaData][] = [];
+  displayComponent: boolean = false;
 
   constructor(private appStateService: AppStateService, private restService: RestService) {
     this.subscribeToAppState();
@@ -30,6 +31,7 @@ export class VideofilesComponent implements OnInit, OnDestroy {
       this.videoFiles = [...(appState.videoFilesMetaData.entries())].sort().reverse();
       console.log('(Video files Component) App State subcription received & sorted:');
       console.log(this.videoFiles);
+      this.displayComponent = this.appState.activeMediaSelectionType === 'Videos';
     });
   }
 

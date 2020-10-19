@@ -18,6 +18,7 @@ export class AudiofilesComponent implements OnInit, OnDestroy {
   private appState: AppState = new AppState();
 
   audioFiles: [String, MediaMetaData][] = [];
+  displayComponent: boolean = false;
 
   constructor(private appStateService: AppStateService, private restService: RestService) {
     this.subscribeToAppState();
@@ -31,6 +32,7 @@ export class AudiofilesComponent implements OnInit, OnDestroy {
       this.audioFiles = [...(appState.audioFilesMetaData.entries())].sort().reverse();
       console.log('(Audio files Component) App State subcription received & sorted:');
       console.log(this.audioFiles);
+      this.displayComponent = this.appState.activeMediaSelectionType === 'Audios';
     });
   }
 

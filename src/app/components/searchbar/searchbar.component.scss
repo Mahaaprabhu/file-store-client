@@ -1,0 +1,42 @@
+.filter-section {
+    height: 15vh;
+}
+
+.search-bar-wrapper {
+    height: 40%;
+    width: 80%;
+    max-width: 60rem;
+    margin:auto;
+    .search-input {
+        height: 100%;
+        width: 100%;
+        font-size: x-large;
+        text-align: center;
+    }
+}
+
+.search-selection-bar {
+    height: 60%;
+    width: 80%;
+    max-width: 60rem;
+    margin: auto;
+    .search-category-tab {
+        height: 100%;
+        width: 25%;
+        float: left;
+        .search-category {
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            font-size: x-large;
+            background-color: gray;
+        }
+        .search-category:hover, .search-category:active {
+            background-color: black;
+            color: white;
+            font-size: medium;
+        }
+    }
+    
+}
+

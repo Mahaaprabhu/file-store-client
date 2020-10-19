@@ -16,6 +16,7 @@ export class OtherfilesComponent implements OnInit, OnDestroy {
   private appState: AppState = new AppState();
 
   otherFiles: [String, MediaMetaData][] = [];
+  displayComponent: boolean = false;
 
   constructor(private appStateService: AppStateService) {
     this.subscribeToAppState();
@@ -29,6 +30,7 @@ export class OtherfilesComponent implements OnInit, OnDestroy {
       this.otherFiles = [...(appState.otherFilesMetaData.entries())].sort().reverse();
       console.log('(Other files Component) App State subcription received & sorted:');
       console.log(this.otherFiles);
+      this.displayComponent = this.appState.activeMediaSelectionType === 'Others';
     });
   }
 

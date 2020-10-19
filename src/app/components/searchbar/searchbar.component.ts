@@ -21,4 +21,8 @@ export class SearchbarComponent implements OnInit {
     this.appStateService.filterMediaFiles(this.filterKey);
   }
 
+  onCategorySelection(selectionCategory: String) {
+    this.appStateService.updateAtiveMediaSelectionType(selectionCategory);
+  }
+
 }

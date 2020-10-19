@@ -1,5 +1,4 @@
-<p>otherfiles works!</p>
-<div>
+<div class="display-section" *ngIf="displayComponent">
     <div *ngFor="let mediaKeyValue of otherFiles">
         <div>{{mediaKeyValue[1].filename}}</div>
     </div>
