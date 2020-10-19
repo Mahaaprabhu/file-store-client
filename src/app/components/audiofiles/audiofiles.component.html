@@ -1,9 +1,12 @@
 <div class="display-section" *ngIf="displayComponent">
-    <div *ngFor="let mediaKeyValue of audioFiles">
-        <div>{{mediaKeyValue[1].filename}}</div>
-        <audio width="300" height="200" controls preload="none">
+    <div class="audio-entity" *ngFor="let mediaKeyValue of audioFiles">
+        <div class="file-name">{{mediaKeyValue[1].filename}}</div>
+        <i class="fas fa-file-audio audio-icon"></i>
+        <audio controls preload="none">
             <source [src]="getMediaFileUri(mediaKeyValue[1]._id)" [type]="mediaKeyValue[1].contentType">
             Your browser does not support the video tag.
         </audio>
+        <div class="file-upload-date">{{mediaKeyValue[1].uploadDate}}</div>
+        <div class="file-delete-icon" (click)="onDeleteRequest(mediaKeyValue[1]._id)"><i class="fas fa-trash-alt"></i></div>
     </div>
 </div>

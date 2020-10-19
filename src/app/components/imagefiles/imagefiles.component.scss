@@ -1,0 +1,20 @@
+.display-section {
+    display: grid;
+    max-width: 90vw;
+    height: 60vh;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: .6rem;
+    grid-row-gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    .image-entity {
+        width: 100%;
+        max-height: 25rem;
+    }
+    img {
+        width: 100%;
+        max-height: 15rem;
+        margin-bottom: 1rem;
+    }
+}

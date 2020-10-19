@@ -20,23 +20,30 @@
     width: 80%;
     max-width: 60rem;
     margin: auto;
-    .search-category-tab {
-        height: 100%;
-        width: 25%;
-        float: left;
-        .search-category {
-            width: 100%;
-            padding: 1rem;
-            text-align: center;
-            font-size: x-large;
-            background-color: gray;
-        }
-        .search-category:hover, .search-category:active {
-            background-color: black;
-            color: white;
-            font-size: medium;
-        }
-    }
-    
 }
 
+.search-category-tab {
+    height: 100%;
+    width: 25%;
+    float: left;
+}
+
+.search-category {
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: large;
+    background-color: gray;
+}
+
+.search-category:hover, .search-category:active {
+    background-color: rgb(38, 35, 41);
+    color: white;
+    font-size: small;
+}
+
+.activecategory {
+    background-color: rgb(7, 5, 12);
+    color: white;
+    font-size: small;
+}

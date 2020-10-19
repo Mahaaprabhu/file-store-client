@@ -1,6 +1,10 @@
 <div class="display-section" *ngIf="displayComponent">
-    <div *ngFor="let mediaKeyValue of imageFiles">
-        <div>{{mediaKeyValue[1].filename}}</div>
-        <img [src]="getMediaFileUri(mediaKeyValue[1]._id)" [alt]="mediaKeyValue[1].filename" width="300" height="200">
+    <div class="image-entity" *ngFor="let mediaKeyValue of imageFiles">
+        <div class="file-name">{{mediaKeyValue[1].filename}}</div>
+        <a [href]="getMediaFileUri(mediaKeyValue[1]._id)" download>
+            <img [src]="getMediaFileUri(mediaKeyValue[1]._id)" [alt]="mediaKeyValue[1].filename">
+        </a>
+        <div class="file-upload-date">{{mediaKeyValue[1].uploadDate}}</div>
+        <div class="file-delete-icon" (click)="onDeleteRequest(mediaKeyValue[1]._id)"><i class="fas fa-trash-alt"></i></div>
     </div>
 </div>

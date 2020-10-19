@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { AllfilesComponent } from './components/allfiles/allfiles.component';
 import { AudiofilesComponent } from './components/audiofiles/audiofiles.component';
 import { VideofilesComponent } from './components/videofiles/videofiles.component';
 import { ImagefilesComponent } from './components/imagefiles/imagefiles.component';
@@ -21,7 +20,6 @@ import { UploadsComponent } from './components/uploads/uploads.component';
     HeaderComponent,
     FooterComponent,
     SearchbarComponent,
-    AllfilesComponent,
     AudiofilesComponent,
     VideofilesComponent,
     ImagefilesComponent,

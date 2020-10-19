@@ -40,6 +40,9 @@ export class AudiofilesComponent implements OnInit, OnDestroy {
     return this.restService.getMediaFileUri(medieFileId);
   }
   
+  private onDeleteRequest(fileId: String) {
+    this.appStateService.deleteMediaFileFromServer(fileId);
+  }
   /**
    * Unsubscribe the app state subcription on destroy.
    */

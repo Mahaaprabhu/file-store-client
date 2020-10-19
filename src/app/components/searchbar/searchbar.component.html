@@ -1,22 +1,26 @@
 <div class="filter-section">
     <div class="search-bar-wrapper">
         <input class="search-input" 
-                placeholder="Search files"
+                placeholder="type to search files..."
                 type="text" [(ngModel)]="filterKey"
                 (keyup)="onFilter($event)"/>
     </div>
     <div class="search-selection-bar">
         <div class="search-category-tab" (click)="onCategorySelection('Images')">
-            <div class="search-category">Images</div>
+            <div class="search-category"
+                [ngClass]="{activecategory: activeCategorySelection=='Images'}">Images</div>
         </div>
         <div class="search-category-tab" (click)="onCategorySelection('Audios')">
-            <div class="search-category">Audios</div>
+            <div class="search-category" 
+                [ngClass]="{activecategory: activeCategorySelection=='Audios'}">Audios</div>
         </div>
         <div class="search-category-tab" (click)="onCategorySelection('Videos')">
-            <div class="search-category">Videos</div>
+            <div class="search-category" 
+                [ngClass]="{activecategory: activeCategorySelection=='Videos'}">Videos</div>
         </div>
         <div class="search-category-tab" (click)="onCategorySelection('Others')">
-            <div class="search-category">Others</div> 
+            <div class="search-category" 
+                [ngClass]="{activecategory: activeCategorySelection=='Others'}">Others</div> 
         </div>
     </div>
 </div>

@@ -22,3 +22,36 @@ html {
     height: 60vh;
     overflow-y: scroll;
 }
+
+.file-name {
+    background-color: black;
+    color: white;
+    font-size: small;
+    font-family: cursive;
+    padding: 1rem;
+    height: 20%;
+}
+
+.file-upload-date {
+    background-color:white;
+    color:black;
+    font-size: small;
+    float: left;
+}
+
+.file-delete-icon {
+    float: right;
+    i {
+        font-size: 2rem;
+        color: black;
+        text-align: center;
+    }
+}
+
+.file-delete-icon:hover {
+    i {
+        font-size: 2rem;
+        color: red;
+        text-align: center;
+    }
+}

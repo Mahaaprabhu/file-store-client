@@ -31,6 +31,10 @@ export class RestService {
     return this.http.post(`${this.currentServerHostUrl}/media/`, obj)
   }
 
+  deleteMediaFileFromServer(mediaFileId: String) {
+    return this.http.delete(`${this.currentServerHostUrl}/media/file/${mediaFileId}`);
+  }
+
   getMediaMetaDataFromServer(): Observable<any> {
     return this.http.get(`${this.currentServerHostUrl}/media/metadata`);
   }

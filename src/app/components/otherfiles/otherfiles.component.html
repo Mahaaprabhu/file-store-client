@@ -1,5 +1,13 @@
 <div class="display-section" *ngIf="displayComponent">
-    <div *ngFor="let mediaKeyValue of otherFiles">
-        <div>{{mediaKeyValue[1].filename}}</div>
+    <div class="other-entity" *ngFor="let mediaKeyValue of otherFiles">
+        <div class="file-name">{{mediaKeyValue[1].filename}}</div>
+        <a [href]="getMediaFileUri(mediaKeyValue[1]._id)" download>
+            <div class="other">
+                <i class="fas fa-file-download"></i>
+            </div>
+        </a>
+
+        <div class="file-upload-date">{{mediaKeyValue[1].uploadDate}}</div>
+        <div class="file-delete-icon" (click)="onDeleteRequest(mediaKeyValue[1]._id)"><i class="fas fa-trash-alt"></i></div>
     </div>
 </div>

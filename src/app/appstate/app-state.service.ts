@@ -116,6 +116,16 @@ export class AppStateService {
     );
   }
 
+  public deleteMediaFileFromServer(mediaFileId: String) : void {
+    this.restService.deleteMediaFileFromServer(mediaFileId).subscribe(
+      (res) => {
+        console.log(res);
+        this.loadAppState();
+      },
+      (err) => console.log(err)
+    );
+  }
+
   private resetAppState(): void {
     this.allFilesMetaData = new Map();
     this.audioFilesMetaData = new Map();

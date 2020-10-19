@@ -1,0 +1,25 @@
+.display-section {
+    display: grid;
+    max-width: 90vw;
+    height: 60vh;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: .3rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    .audio-entity {
+        width: 100%;
+        min-height: 10rem;
+        max-height: 15rem;
+    }
+    audio {
+        width: 100%;
+        min-width: 25rem;
+    }
+    .audio-icon {
+        display: block;
+        font-size: 5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+}

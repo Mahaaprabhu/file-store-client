@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { AppStateService } from 'src/app/appstate/app-state.service';
+import { AppState } from 'src/app/models/AppState';
 
 @Component({
   selector: 'app-searchbar',
@@ -9,8 +11,14 @@ import { AppStateService } from 'src/app/appstate/app-state.service';
 export class SearchbarComponent implements OnInit {
 
   filterKey = "";
+  activeCategorySelection: String = 'Images';
 
-  constructor(private appStateService: AppStateService) { }
+  private appStateSubscription: Subscription;
+  private appState: AppState = new AppState();
+
+  constructor(private appStateService: AppStateService) {
+    this.subscribeToAppState();
+  }
 
   ngOnInit(): void {
   }
@@ -23,6 +31,20 @@ export class SearchbarComponent implements OnInit {
 
   onCategorySelection(selectionCategory: String) {
     this.appStateService.updateAtiveMediaSelectionType(selectionCategory);
+  }
+
+  private subscribeToAppState() : void {
+    this.appStateSubscription = this.appStateService.getAppStateSubjectAsObservable().subscribe((appState: AppState) => {
+      this.appState = appState;
+      this.activeCategorySelection = this.appState.activeMediaSelectionType;
+    });
+  }
+
+  /**
+   * Unsubscribe the app state subcription on destroy.
+   */
+  ngOnDestroy(): void {
+    this.appStateSubscription.unsubscribe();
   }
 
 }
