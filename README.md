@@ -1,6 +1,8 @@
 # file-store-client
 A media storage client to stream, upload &amp; download media files (audio, video, image etc)
 
+## GitHub Page: https://mahaaprabhu.github.io/file-store-client/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
 ## Development server
