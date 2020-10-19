@@ -1,6 +1,7 @@
 <div class="upload-section">
-    <form [formGroup]="mediaFormGroup" enctype="multipart/form-data" (ngSubmit)="onMediaSubmit($event)">
-        <input type="file" formControlName="mediaFormControl" name="media" (change)="onFileSelect($event)"/>
-        <input type="submit"/>
+    <form class="upload-form" [formGroup]="mediaFormGroup" enctype="multipart/form-data" (ngSubmit)="onMediaSubmit($event)">
+        <input class="file-input" type="file" formControlName="mediaFormControl" name="media" (change)="onFileSelect($event)"/>
+        <br>
+        <input class="submit-btn" type="submit" value="Add file to the Storage"/>
     </form>
 </div>

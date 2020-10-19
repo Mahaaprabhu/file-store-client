@@ -1,5 +1,6 @@
 .display-section {
     display: grid;
+    background-color: black;
     max-width: 90vw;
     height: 60vh;
     margin: auto;
@@ -9,7 +10,8 @@
     border-radius: 1rem;
     .other-entity {
         width: 100%;
-        max-height: 15rem;
+        max-height: 20rem;
+        background-color: white;
     }
     .other {
         width: 100%;
@@ -19,6 +21,7 @@
             text-align: center;
             color: black;
             padding: 1rem;
+            background-color: white;
         }
     }
 }

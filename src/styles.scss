@@ -10,6 +10,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 .header {
     height: 10vh;
 }
@@ -37,10 +41,13 @@ html {
     color:black;
     font-size: small;
     float: left;
+    padding: .1rem;
 }
 
 .file-delete-icon {
+    padding: .2rem;
     float: right;
+    background-color: white;
     i {
         font-size: 2rem;
         color: black;
@@ -53,5 +60,14 @@ html {
         font-size: 2rem;
         color: red;
         text-align: center;
+    }
+}
+
+.no-record-default {
+    color: white;
+    font-size: medium;
+    width: 100%;
+    p {
+        display: block;
     }
 }

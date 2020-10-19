@@ -1,3 +1,28 @@
 .upload-section {
     height: 10vh;
+    min-height: 10rem;
+    padding: 2rem 0;
+}
+
+.upload-form {
+    height: 100%;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.submit-btn {
+    display: block;
+    font-size: large;
+    min-width: 25rem;
+    width: 80vw;
+    padding: .5rem;
+}
+
+.file-input {
+    display: block;
+    font-size: large;
+    width: 25rem;
+    width: 80vw;
+    padding: .5rem;
 }

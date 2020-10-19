@@ -1,5 +1,6 @@
 .display-section {
     display: grid;
+    background-color: black;
     max-width: 90vw;
     height: 60vh;
     margin: auto;
@@ -10,11 +11,14 @@
     .audio-entity {
         width: 100%;
         min-height: 10rem;
-        max-height: 15rem;
+        max-height: 20rem;
+        background-color: white;
+        
     }
     audio {
         width: 100%;
         min-width: 25rem;
+        background-color: white;
     }
     .audio-icon {
         display: block;
