@@ -1,28 +1,40 @@
 .upload-section {
-    height: 10vh;
-    min-height: 10rem;
+    height: 20vh;
+    min-height: 15rem;
     padding: 2rem 0;
 }
 
 .upload-form {
     height: 100%;
-    width: 80%;
-    display: block;
+    width: 90%;
     margin: auto;
+    display: block;
 }
 
 .submit-btn {
+    background-color: gray;
     display: block;
-    font-size: large;
     min-width: 25rem;
-    width: 80vw;
-    padding: .5rem;
+    width: 30vw;
+    height: 50%;
+    padding: 1rem;
+    text-align: center;
+    font-size: small;
+}
+
+.submit-btn:hover, .submit-btn:active {
+    background-color: rgb(38, 35, 41);
+    color: white;
+    font-size: large;
 }
 
 .file-input {
     display: block;
-    font-size: large;
-    width: 25rem;
-    width: 80vw;
-    padding: .5rem;
+    min-width: 25rem;
+    width: 30vw;
+    height: 50%;
+    padding: 1rem;
+    text-align: center;
+    font-size: small;
+    border: .1rem solid black;
 }

@@ -23,7 +23,7 @@ export class RestService {
 
   private prodServerHostUrl: String = 'https://intense-atoll-71263.herokuapp.com';
   private devServerHostUrl: String = 'http://localhost:3000';
-  private currentServerHostUrl: String = this.devServerHostUrl;
+  private currentServerHostUrl: String = this.prodServerHostUrl;
 
   constructor(private http: HttpClient) { }
 

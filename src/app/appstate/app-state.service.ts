@@ -111,6 +111,7 @@ export class AppStateService {
       (res) => {
         console.log(res);
         this.loadAppState();
+        alert('File got Saved. It should be available in the corrseponding tab shortly..!');
       },
       (err) => console.log(err)
     );

@@ -10,6 +10,7 @@ import { AppStateService } from 'src/app/appstate/app-state.service';
 export class UploadsComponent implements OnInit {
 
   file: any;
+  eventTarget: any;
 
   constructor(private appStateService: AppStateService) { }
 
@@ -24,6 +25,8 @@ export class UploadsComponent implements OnInit {
     console.log(event.target.files);
     if (event.target.files.length > 0) {
       this.file = event.target.files[0];
+      console.log(event);
+      this.eventTarget = event.target;
     }
   }
 
@@ -32,6 +35,7 @@ export class UploadsComponent implements OnInit {
     formData.append('file', this.file);
     console.log(formData);
     this.appStateService.addMediaFile(formData);
+
   }
 
 }

@@ -1,5 +1,6 @@
 .filter-section {
     height: 15vh;
+    min-height: 10rem;
 }
 
 .search-bar-wrapper {
@@ -8,10 +9,12 @@
     max-width: 60rem;
     margin:auto;
     .search-input {
+        min-height: 5rem;
         height: 100%;
         width: 100%;
-        font-size: x-large;
+        font-size: xx-large;
         text-align: center;
+        padding: 1rem;
     }
 }
 
@@ -30,20 +33,20 @@
 
 .search-category {
     height: 100%;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
-    font-size: large;
+    font-size: small;
     background-color: gray;
 }
 
 .search-category:hover, .search-category:active {
     background-color: rgb(38, 35, 41);
     color: white;
-    font-size: small;
+    font-size: large;
 }
 
 .activecategory {
     background-color: rgb(7, 5, 12);
     color: white;
-    font-size: small;
+    font-size: large;
 }
